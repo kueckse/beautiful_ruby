@@ -124,6 +124,9 @@ files.each do |filename|
       indent += catches + ensures
     end
     indent -= catches + ensures + ends + right_braces + elses + elsifs + whens
+
+    indent.times do
+      t_file.print TAB
     end
 
     if left_braces > 0
